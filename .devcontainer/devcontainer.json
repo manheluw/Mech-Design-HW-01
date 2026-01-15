@@ -1,0 +1,37 @@
+{
+  "name": "Starer Template",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11-bookworm",
+  "postCreateCommand": "pip install -r requirements.txt ",
+  "waitFor": "postCreateCommand",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "GitHub.copilot",
+        "ms-toolsai.datawrangler",
+        "quarto.quarto"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "jupyter.askForKernelRestart": false,
+        "jupyter.interactiveWindow.collapseCellInputCode": "firstLine",
+        "files.exclude": {
+          ".*": true,
+          "test_*": true,
+          "pytest.ini": true,
+          "conftest.py": true
+        },
+        "workbench.sideBar.location": "left",
+        "workbench.activityBar.location": "top",
+        "workbench.secondarySideBar.defaultVisibility": "visible",
+        "github.copilot.enable": {
+          "*": false,
+          "plaintext": false,
+          "markdown": false
+        },
+        "extensions.ignoreRecommendations": true
+      }
+    }
+  }
+}
